@@ -1,0 +1,126 @@
+/* Styling web page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url('../IMG/background.jpg');
+    background-size: cover;
+}
+/* Styling  the navigation bar */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+/* Styling h1 tag*/
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button {
+    display: block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* The total price is displayed as a subtitle */
+#orderSummary {
+    margin-top: 30px;
+    border-top: 2px solid #000000;
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #d8b100;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* decorating the "total" part of the order summary with*/
+form {
+    margin-bottom: 20px;
+}
+
+select,
+input[type="radio"],
+input[type="checkbox"] {
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+/*making all checkbox and radio button look like one single component*/
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    font-size: 16px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+}
+
+/*adding a checkmark to checked checkboxes and radio*/
+input[type="checkbox"]::before,
+input[type="radio"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 3px;
+    opacity: 0;
+}
+/* when checkbox is checked the before pseudo element will be visible */
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before {
+    opacity: 1;
+}
+
+/* adding focus styles for accessibility */
+.smoothie-description {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}

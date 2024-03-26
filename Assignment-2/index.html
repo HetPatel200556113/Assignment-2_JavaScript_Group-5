@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Order Form</title>
+    <!--external css file-->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smoothie Order Form</h1>
+        <form id="smoothieForm">
+            <!--Smoothie Flavor Selector-->
+            <label for="flavor">Select Flavor:</label>
+            <select id="SmoothieFlavor" name="flavor">
+                <option value="Strawberry Banana" data-price="5.99">Strawberry-Banana Smoothie ($5.99)</option>
+                <option value="Mango Pineapple" data-price="6.49">Mango-Pineapple smoothie ($6.49)</option>
+                <option value="Berry Blast" data-price="6.99">Berry-Blast smoothie ($6.99)</option>
+            </select><br>
+            <!-- Select Quantity -->
+            <label for="size">Select Size:</label>
+            <input type="radio" id="smallSize" name="size" value="Small" data-price-multiplier="1" checked>
+            <label for="small">Small</label>
+            <input type="radio" id="mediumSize" name="size" value="Medium" data-price-multiplier="1.5">
+            <label for="medium">Medium</label>
+            <input type="radio" id="largeSize" name="size" value="Large" data-price-multiplier="2">
+            <label for="large">Large</label><br>
+            
+            <!--Add extra ingredients-->
+            <label for="extras">Extras:</label><br>
+            <input type="checkbox" id="proteinPowder" name="extras" value="Protein Powder" data-price="1.50">
+            <label for="proteinPowder">Protein Powder (+$1.50)</label><br>
+            <input type="checkbox" id="spinach" name="extras" value="Spinach" data-price="0.75">
+            <label for="spinach">Spinach (+$0.75)</label><br>
+            
+            <button type="button" onclick="placeOrder()">Place Order</button>
+        </form>
+        <!--total cost display-->
+        <div id="orderSummary"></div>
+    </div>
+    <!--Javascript File Linking-->
+    <script src="./JS/script.js"></script>
+</body>
+</html>
